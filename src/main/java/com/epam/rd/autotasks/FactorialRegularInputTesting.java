@@ -13,5 +13,6 @@ class FactorialRegularInputTesting {
     void testBigInt(){
         assertEquals("3628800", factorial.factorial("10"));
         assertEquals("479001600", factorial.factorial("12"));
+        assertEquals("6227020800", factorial.factorial("13"));
     }
 }
