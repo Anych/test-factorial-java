@@ -4,7 +4,7 @@ public class Factorial {
     int integer;
     public String factorial(String n) {
         getInt(n);
-        int result = getFactorial();
+        long result = getFactorial();
 
         return String.format("%d", result);
     }
@@ -20,8 +20,8 @@ public class Factorial {
         }
     }
 
-    public int getFactorial() {
-        int result = 1;
+    public long getFactorial() {
+        long result = 1;
 
         for (int factor = 2; factor <= integer; factor++) {
             result *= factor;
