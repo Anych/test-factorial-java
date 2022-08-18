@@ -4,13 +4,13 @@ public class Factorial {
     int integer;
     public String factorial(String n) {
         getInt(n);
+        long result = getFactorial();
 
-        return String.format("%d", integer);
+        return String.format("%d", result);
     }
 
     public void getInt(String n) {
         try {
-            System.out.println(Integer.parseInt(n));
             integer = Integer.parseInt(n);
         } catch (NumberFormatException e) {
             throw new IllegalArgumentException("A value must be an integer.");
@@ -18,6 +18,16 @@ public class Factorial {
         if (integer < 0) {
             throw new IllegalArgumentException("A value must be greater than 0.");
         }
+    }
+
+    public long getFactorial() {
+        long result = 1;
+
+        for (int factor = 2; factor <= integer; factor++) {
+            result *= factor;
+        }
+
+        return result;
     }
 }
 
