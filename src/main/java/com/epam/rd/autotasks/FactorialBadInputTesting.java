@@ -14,8 +14,6 @@ class FactorialBadInputTesting {
         IllegalArgumentException thrown = assertThrows(
                 IllegalArgumentException.class,
                 () -> factorial.factorial(null));
-
-        assertEquals("A value must be an integer.", thrown.getMessage());
     }
 
     @Test
@@ -23,8 +21,6 @@ class FactorialBadInputTesting {
         IllegalArgumentException thrown = assertThrows(
                 IllegalArgumentException.class,
                 () -> factorial.factorial("-1000"));
-
-        assertEquals("A value must be greater than 0.", thrown.getMessage());
     }
 
     @Test
@@ -32,8 +28,6 @@ class FactorialBadInputTesting {
         IllegalArgumentException thrown = assertThrows(
                 IllegalArgumentException.class,
                 () -> factorial.factorial("10.5"));
-
-        assertEquals("A value must be an integer.", thrown.getMessage());
     }
 
     @Test
@@ -41,8 +35,6 @@ class FactorialBadInputTesting {
         IllegalArgumentException thrown = assertThrows(
                 IllegalArgumentException.class,
                 () -> factorial.factorial("five"));
-
-        assertEquals("A value must be an integer.", thrown.getMessage());
     }
 
 }
